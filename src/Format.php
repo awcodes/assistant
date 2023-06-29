@@ -8,10 +8,10 @@ class Format
 {
     public static function article(string $word, ?string $plural = 'an', ?string $singular = 'a'): string
     {
-        return in_array(strtolower(substr($word, 0, 1)), ['a', 'e', 'i', 'o', 'u']) ?  : $singular . ' ' . $word;
+        return in_array(strtolower(substr($word, 0, 1)), ['a', 'e', 'i', 'o', 'u']) ?: $singular . ' ' . $word;
     }
 
-    public static function cleanPhone(string $value): array|string|null
+    public static function cleanPhone(string $value): array | string | null
     {
         return preg_replace("/\D/", '', $value);
     }
